@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    if (false){
+      let std1 = {name:"홍길동", kor:90, eng:90, mat:80};
+
+      for(key in std1){
+        console.log(key);
+      }
+      console.log(std1["name"]);
+      std1["name"] = '길동홍';
+      console.log(std1["name"]);
+
+      let arr = [1,2,3,4,5];
+
+      for(val of arr){
+        console.log(val);
+      }
+      console.log(arr[1]);
+    }
+
+    if (false){
+      let user = {name:'박연미', age:20};
+      let user1 = user;
+
+      console.log(user);
+      user1["name"] = '연미박';
+      console.log(user);
+
+      let user3 = {};
+      for(key in user){
+        user3[key] = user[key];
+      }
+
+      console.log(user3);
+
+      let user4 = {};
+      Object.assign(user4, user);
+      console.log("aa", user4);
+      user4["name"] = '말복';
+      console.log("bb", user4);
+      console.log("aa", user);
+    }
+
+    if (false){
+      let arr = [10,40,30,40,40];
+
+      arr.forEach(function (element) {
+        console.log(element);
+      });
+      // arr.forEach((val) => console.log(val));
+      // console.log("---------------");
+      //  arr = arr.slice(2, 3);
+      // arr.forEach((val) => console.log(val));
+      arr.push(6);
+      arr.forEach((val) => console.log(val));
+      console.log("aaa", arr.indexOf(30));
+      console.log("aaa", arr.lastIndexOf(40));
+
+      for(key in arr){
+        console.log(key);
+      }
+
+    }
+
+    if (false){
+      //객체 배열만들기 
+      let students = [
+        {"name":"홍길동", kor:90, eng:90, mat:80},
+        {"name":"장길산", kor:80, eng:80, mat:100},
+        {"name":"임꺽정", kor:70, eng:70, mat:90},
+        {"name":"장승업", kor:60, eng:80, mat:60},
+        {"name":"홍경래", kor:70, eng:50, mat:40},
+      ];
+
+      console.log("객체의 개수 : ", students.length);
+      console.log( students[0].name, students[0].kor,  students[0].eng,  students[0].mat );
+      console.log( students[1].name, students[2].kor,  students[3].eng,  students[3].mat );
+      console.log( students[2]["name"], students[2]["kor"],  students[2]["eng"],  students[2]["mat"] );
+      console.log("------");
+
+      for(i=0; i<students.length; i++){
+          console.log( students[i].name, students[i].kor,  students[i].eng,  students[i].mat );
+      }
+      console.log("------");
+
+      for(index in students){
+          console.log( students[index].name, students[index].kor,  students[index].eng,  students[index].mat );
+      }
+      console.log("------");
+    
+      for(student of students){
+          console.log( student.name, student.kor,  student.eng,  student.mat );
+      }
+      console.log("------");
+    
+      for (const [key, value] of Object.entries(students)) {
+          console.log(`${key}: ${value.name} ${value.kor} ${value.eng} ${value.mat}`);
+      }   
+
+    }
+
+    if (false){
+      let arr = [10,20,30,40,50];
+
+      arr.forEach(function (val) {
+        console.log(val);
+      });
+
+      arr.forEach((val) => console.log(val));
+      
+      var users = [
+          { name: '철수', age: 20 },
+          { name: '영희', age: 25 },
+          { name: '민수', age: 23 },
+          { name: '주연', age: 27 }
+      ];
+
+      var usersName = users.map(function (element) {
+        console.log(11);
+        return element.name + element.age;
+        // 각 요소의 nama 값만 반환
+      });
+
+      console.log(usersName);
+
+      var usersOld = users.filter(function (element) {
+        return element.age > 23;
+      });
+      console.log(usersOld);
+
+    }
+
+    if (true){
+      function my_func(){
+        console.log("나만의 함수");
+      }
+
+      const info = {
+        code : 1004,
+        name : "홍희동",
+        func : my_func(),
+        subjects : ['JSP','JAVA','C','JS']
+      };
+
+      console.log(info.code);
+      console.log(info.subjects[2]);
+      //info.func;
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+
+    <script>
+        function process() {
+            let obj = document.getElementById("target");
+            alert(obj.value);
+        }
+
+    </script>
+    
+
+</head>
+<body>
+    <script>
+        document.write("환영합니다");
+        console.log("안녕하세요");
+    </script>
+    <br>
+    <input type="text" id="target">
+    <input type="button" value="제출" onclick="process()">
+    <hr />
+    <form>
+        <input type="button" name="btn1" id="btn1" value="버튼1">
+        <input type="button" name="btn2" id="btn2" value="버튼2">
+        <hr />
+        <input type="button" name="btna" id="btna" value="버튼A" class="btn">
+        <input type="button" name="btna" id="btna1" value="버튼A1">
+        <input type="button" name="btnb" id="btnb" value="버튼B">
+        <input type="button" name="btnc" id="btnc" value="버튼C" class="btn">
+    </form>
+    <br>
+    <input type="button" name="btnd" id="btnd" value="버튼D" class="btn">
+    
+    <script>
+        let btna = document.getElementsByName("btna");
+        btna[0].onclick = function() {
+            alert("A");
+        }
+        btna[1].onclick = function() {
+            alert("A1");
+        }
+
+        let btnb = document.getElementById("btnb");
+        btnb.onclick = function() {
+            alert("btnb");
+        }
+
+        var input = document.getElementsByTagName("input");
+        for(var i=0;i<input.length;i++){
+            input[i].value = "Button";
+        }
+    </script>
+</body>
+</html>

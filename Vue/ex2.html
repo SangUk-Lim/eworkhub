@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeSy() {
+            document.getElementById("p1").style.color = "red";
+            document.getElementById("p1").style.fontFamily = "Century Schoolbook";
+            document.getElementById("p1").style.fontStyle = "italic";
+        }
+    </script>
+
+    <script>
+        var color = ["white", "yellow", "aqua", "purple"];
+
+        var i=0;
+        
+        function changeBg() {
+            i++;
+            if (i >= color.length) i=0;
+            document.getElementById("body").style.backgroundColor = color[i];    
+        }
+
+        function process() {
+            let obj=document.myform.text;
+            alert(obj.value);
+        }
+        function process1() {
+            let obj=document.querySelector("#text");
+            alert(obj.value);
+        }
+    </script>
+
+    <script>
+        function get() {
+            var val=document.getElementById("ex").innerHTML;
+            alert(val);
+        }
+
+        function set(v) {
+            document.getElementById("ex").innerHTML = v;
+        }
+    </script>
+</head>
+<body id="body">
+    <h1 id="title1" class="blue">제목줄1</h1>
+    <h1 id="title2" class="blue">제목줄1</h1>
+    <h1 id="title3" class="blue">제목줄1</h1>
+    
+    <p id="p1">this is a paragraph</p>
+    <input type="button" onclick="changeSy()" value="눌러보세요">
+    <br>
+    <br>
+    <button onclick="changeBg()">배경색 바꾸기</button>
+    
+    <form name="myform">
+        <input type="text" name="text" id="text">
+        <input type="button" value="제출" onclick="process()">
+        <input type="button" value="제출1" onclick="process1()">
+    </form>
+
+    <div id="ex">여기가 div로 선언됨<br>
+        <input type="button" name="btna" id="btna" value="버튼A" class="btn">
+        <input type="button" name="btna" id="btna1" value="버튼A1">
+        <input type="button" name="btnb" id="btnb" value="버튼B">
+        <input type="button" name="btnc" id="btnc" value="버튼C" class="btn">
+
+    </div>
+    <a href="#" onclick="get()">div 요소내용 출력하기</a>
+    <a href="#" onclick="set('변경되었습니다')">div요소 변경</a>
+    <br>
+    <img id="image" src="pome.png" width="120" height="100">
+    <script>
+        function chgImg() {
+            document.getElementById("image").src = "poodle.png"
+        }
+    </script>
+    <input type="button" onclick="chgImg()" value="눌러보세요">
+</body>
+</html>
+<script>
+    let blue = document.getElementsByClassName("blue");
+    let title = ["첫번째", "두번째", "세번째"];
+    let colors = ["#ff0000", "#aa0000", "#660000"];
+
+    for(var i=0;i<blue.length;i++) {
+        blue[i].innerHTML=title[i];
+        blue[i].style.color = colors[i];
+    }
+</script>
+<script>
+    const h1=document.querySelectorAll("h1");
+    h1[1].onclick = function(e) {
+        alert("h1");
+    }
+
+    var j=0;
+    var color1 = ["blue", "red"];
+    h1[2].onclick = function(e) {
+        j++;
+        if (j>=color1.length) j=0;
+        h1[2].style.color = color1[j];
+    }
+</script>

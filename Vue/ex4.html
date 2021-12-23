@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        아이디(6-8문자) : <input type="text" name="id" id="id" autofocus>
+        <input type="button" onclick="chkLen(6,8)" value="확인">
+        
+    </form>
+    <br>
+    
+    <form>
+        과일선택 : <select name="sel" id="sel" class="req">
+            <option value="0">선택하세요</option>
+            <option value="1">사과</option>
+            <option value="2">배</option>
+            <option value="3">바나나</option>
+        </select>
+        <button onclick="selChk()">확인</button>
+    </form>
+    <button onclick="selChk()">확인</button>
+    <input type="button" onclick="selChk()" value="확인1">
+    
+</body>
+</html>
+
+<script>
+    function chkLen(min, max) {
+        let s = document.getElementById("id").value;
+
+        if (s.length == 0) {
+            alert("필드가 비었다");
+            document.getElementById("id").focus();
+            return false;
+        }
+
+        if (s.length >= min && s.length <=max) {
+            return true;
+        } else {
+            alert(min + "-" + max + " 문자 사이로 입력");
+            document.getElementById("id").focus();
+            return false;
+        }
+    }
+
+    function selChk() {
+        let s = document.getElementById("sel").value;
+        if (s == 0) {
+            alert("하나를 선택해야합니다");
+            document.getElementById("sel").focus();
+            return false
+        }
+    }
+</script>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        {{message1}} <br>
+        {{message2}}
+    </div>
+
+    
+      
+      <script type="text/javascript">
+        var app = new Vue({
+          el: '#app',
+          data:{
+            message1 : 'Hello Vue.js!',
+            message2 : '33232323'
+          }
+        });
+
+        var person = {
+            name : 'name1',
+            age : '30'
+        }
+
+        var person1 = ['name2','50'];
+
+      </script>
+
+    <script>
+        console.log(person.age);
+        document.write(person.age + '<br>');
+        console.log(person1[0]);
+        document.write(person1[1] + '살<br>끝');
+    </script>
+     
+     <!-- <script>
+        {
+            let str = "<table border='1'>";
+            str += "<tr>";
+            str += "<td>1</td><td>2</td><td>3</td>";
+            str += "</tr>";
+            str += "<tr>";
+            str += "<td>1</td><td>2</td><td>3</td>";
+            str += "</tr>";
+            str += "<tr>";
+            str += "<td>1</td><td>2</td><td>3</td>";
+            str += "</tr>";
+            str += "</table>";
+            document.write( str );
+            console.log(str);
+        }
+
+        const fir = '홍';
+        const lst = '길동';
+
+        console.log(fir+lst);
+        console.log(fir, lst);
+        console.log(`내 이름은 ${fir+lst}입니다`);
+
+        let rlt1 = `내 이름은 ${fir+lst}입니다`;
+        document.write(rlt1);
+
+        let x = 10;
+        let y = 20;
+        console.log(`${x} + ${y} = ${x+y}`);
+        
+        let s = '자바스크립트에 오신걸 환영합니다.';
+        console.log(s.indexOf('환영'));
+        let s1 = s.replace('자바', '홍바');
+        console.log(s1);
+      { 
+       //location.reload();
+      }
+       console.log(1);
+
+      //window.onload = function() {window.location.reload()};
+      window.onload = function() {
+        if(!window.location.hash) {
+          window.location = window.location + '#loaded';
+          window.location.reload();
+        }
+      }
+
+    </script> -->
+    <script>
+      let id = "easy1004";
+      let pw = "112233";
+    
+      let user_id = prompt("아이디는?","");
+      let user_pw = prompt("비밀번호는?","");
+    
+      if(id == user_id) {
+        if(pw == user_pw) {
+            document.write(user_id+"님 반갑습니다!");
+        } else {
+            alert("비밀번호가 일치하지 않습니다.");
+            location.reload(); // 페이지 새로고침 
+        }
+      } else {
+        alert("아이디가 일치하지 않습니다.");
+        location.reload();
+      }
+    </script>
+
+</body>
+</html>

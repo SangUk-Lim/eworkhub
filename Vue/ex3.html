@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+
+        
+    </script>
+</head>
+<body>
+    <button type="button" onclick="btnCk()">누르세요</button>
+    <br>
+    <span id="rlt"></span>
+    <br>
+    아이디 : <input type="text" id="id" size="20" placeholder="dkdkfasdf" >
+    <button onclick="chkId()">검사</button>
+    <br>
+    <br>
+    x : <input type="text" name="xval" id="xval"><br>
+    y : <input type="text" name="yval" id="yval"><br><br>
+    <button onclick="add('1')">더하기</button>&nbsp;&nbsp;
+    <button onclick="add('2')">빼기</button>&nbsp;&nbsp;
+    <button onclick="add('3')">곱하기</button>&nbsp;&nbsp;
+    <button onclick="add('4')">나누기</button><br>
+    <span id="result"></span>
+    <br>
+    <br>
+    <div id="ex">여기가 div영역</div>
+    <a href="#" onclick="get()">div요소출력</a>
+    <a href="#" onclick="set('변경되었습니다')">div요소변경</a>
+</body>
+</html>
+
+<script>
+    function btnCk() {
+        document.getElementById("rlt").innerHTML = "버튼을 눌렀습니다";
+        document.getElementById("rlt").style.color = "red";
+    }
+    
+    let txt = document.getElementById("rlt");
+    txt.onclick = function(e) {
+        document.getElementById("rlt").innerHTML = "";
+    }
+
+    function chkId() {
+        let s = document.getElementById("id").value;
+        if (s.length < 6) {
+            alert("6글자 이상");
+        } else {
+            alert("OK");
+        }
+    }
+</script>
+<script>
+    function add(sel) {
+        x = document.getElementById("xval").value;
+        y = document.getElementById("yval").value;
+
+        var result = 0;
+
+        if (sel == '1') {
+            result = parseInt(x) + parseInt(y);
+        } else if (sel == '2') {
+            result = parseInt(x) - parseInt(y);
+        } else if (sel == '3') {
+            result = parseInt(x) * parseInt(y);
+        } else {
+            result = parseInt(x) / parseInt(y);
+        }
+
+        document.getElementById("result").innerHTML = result;
+    }
+
+    let cls = document.getElementById("result");
+    cls.onclick = function(e) {
+        document.getElementById("result").innerHTML = "";
+    }
+</script>
+<script>
+    function get() {
+        let ex = document.getElementById("ex").innerHTML;
+        alert(ex);
+    }
+
+    function set(v) {
+        document.getElementById("ex").innerHTML = v;
+    }
+
+    let org = document.getElementById("ex").innerHTML;
+    let fir = document.getElementById("ex");
+    fir.onclick = function(e) {
+        document.getElementById("ex").innerHTML = org;
+    }
+</script>

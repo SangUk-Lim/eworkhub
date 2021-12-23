@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Final 화면구현</h1>
+  <h2>기본 태그 종합 실습1</h2>
+  <form action="#" method="post">
+    <table border="2">
+      <tr>
+        <td rowspan="4"><img src="./욕조무선가습기_라이언.png" alt="욕조무선가습기_라이언" width="80" height="100"></td>
+        <td colspan="4">이력서</td>
+      </tr>
+      <tr>
+        <td rowspan="2">성명</td>
+        <td rowspan="2">홍길동</td>
+        <td colspan="2">주민등록번호</td>
+      </tr>
+      <tr>
+        <td colspan="2">111111-1111111</td>
+      </tr>
+      <tr>
+        <td colspan="4">생년월일 1111년 11월 11일생(만 28세)</td>
+      </tr>
+      <tr>
+        <td>주소</td>
+        <td colspan="4">강남스타일 green</td>
+      </tr>
+      <tr>
+        <td rowspan="2">연락처</td>
+        <td>집</td>
+        <td>02-333-2222</td>
+        <td rowspan="2">전자우편</td>
+        <td rowspan="2">greem@green.com</td>
+      </tr>
+      <tr>
+        <td>핸드폰</td>
+        <td>010-111-0000</td>
+      </tr>
+    </table>
+    <br>
+    <h2>기본 태그 종합 실습2</h2>
+    <h3>설문조사</h3>
+    <p>아래 항목을 채워주세요</p>
+    <p>
+      <table>
+        <tr>
+          <td colspan="3"><b>신상정보</b></td>
+        </tr>
+        <tr>
+          <td>이름</td>
+          <td>:</td>
+          <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <tr>
+          <td>전화번호</td>
+          <td>:</td>
+          <td><input type="tel" name="tel" id="tel"></td>
+        </tr>
+        <tr>
+          <td>이메일</td>
+          <td>:</td>
+          <td><input type="email" name="mail" id="mail"></td>
+        </tr>
+      </table>
+    </p>
+    <p>
+      <b>어떤 경로로 알게 되었습니까?</b><br>
+      <input type="radio" name="path" id="path" value="1" checked>기사<br>
+      <input type="radio" name="path" id="paht" value="2">광고<br>
+      <input type="radio" name="path" id="path" value="3">기타
+    </p>
+    <p>
+      <b>좋아하는 스포츠는 무엇입니까?</b><br>
+      <input type="checkbox" name="sport" id="sport" value="1">테니스&nbsp;
+      <input type="checkbox" name="sport" id="sport" value="2" checked>골프&nbsp;
+      <input type="checkbox" name="sport" id="sport" value="3">농구<br>
+      <input type="checkbox" name="sport" id="sport" value="4">스쿼시&nbsp;
+      <input type="checkbox" name="sport" id="sport" value="5" checked>볼링&nbsp;
+      <input type="checkbox" name="sport" id="sport" value="6">축구<br>
+    </p>
+    <p>
+      <b>연락방법</b>&nbsp;
+      <select name="call" id="call">
+        <option value="1">email</option>
+        <option value="2">phone</option>
+      </select>
+    </p>
+    <p>
+      <input type="checkbox" name="agree" id="agree">
+      개인정보 활용에 동의합니다.
+    </p>
+  </form>
+  <input type="submit" value="submit">
+</body>
+</html>

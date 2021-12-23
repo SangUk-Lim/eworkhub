@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>라이언,힘내!</h2>
+  <table border="2">
+    <tr>
+      <td>이미지sdfgsdfg</td>
+      <td>제품명rgsdfgsdfg</td>
+      <td>가격</td>
+    </tr>
+    <tr>
+      <td>
+        <img src="./욕조무선가습기_라이언.png" alt="욕조무선가습기_라이언" width="300" height="500">
+      </td>
+      <td>라이언 욕조 무선 가습기</td>
+      <td>39,000원</td>
+    </tr>
+    <tr>
+      <td><img src="./트리라이언.png" alt="에어팟프로케이스_라이언" width="202" height="216"></td>
+      <td>라이언 에어팟프로케이스</td>
+      <td>18,000원</td>
+    </tr>
+  </table>
+  <br><br>
+
+  <h2>회원가입</h2>
+  <form action="#" method="post">
+    <table>
+      <tr>
+        <td>아이디</td>
+        <td>:</td>
+        <td><input type="text" name="id" id="id" placeholder="아이디를 입력하세요"></td>
+      </tr>
+      <tr>
+        <td>패스워드</td>
+        <td>:</td>
+        <td><input type="password" name="pw" id="pw"></td>
+      </tr>
+      <tr>
+        <td>성별</td>
+        <td>:</td>
+        <td>
+          남성 <input type="radio" name="gender" id="gender" value="male" checked>
+          여성 <input type="radio" name="gender" id="gender" value="female">
+        </td>
+      </tr>
+      <tr>
+        <td>수강과목</td>
+        <td>:</td>
+        <td>
+          JAVA <input type="checkbox" name="subject" id="subject" value="java" checked>
+          JSP <input type="checkbox" name="subject" id="subject" value="jsp">
+          Spring <input type="checkbox" name="sbuject" id="subject" value="spring">
+        </td>
+      </tr>
+      <tr>
+        <td>메모</td>
+        <td>:</td>
+        <td></td>
+      </tr>
+      <tr aria-colspan="3">
+        <td colspan="3">
+          <textarea name="" id="" cols="35" rows="5"></textarea>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="가입하기">
+    <input type="reset" value="다시작성">
+  </form>
+  <br>
+
+  <form action="#" method="post">
+    <table>
+      <tr>
+        <td>신발사이즈</td>
+        <td>:</td>
+        <td><input type="number" name="shoesize" id="shoesize" min="230", max="290" step="10"></td>
+      </tr>
+      <tr>
+        <td>색상선택</td>
+        <td>:</td>
+        <td><input type="color" name="color" id="color"></td>
+      </tr>
+      <tr>
+        <td>날짜</td>
+        <td>:</td>
+        <td><input type="date" name="date" id="date" min="002000" max="002030"></td>
+      </tr>
+      <tr>
+        <td>시간</td>
+        <td>:</td>
+        <td><input type="time" name="time" id="time"></td>
+      </tr>
+      <tr>
+        <td>범위</td>
+        <td>:</td>
+        <td><input type="range" name="range" id="range" min="0" max="10" step="2"></td>
+      </tr>
+      <tr>
+        <td>진행률 30%</td>
+        <td>:</td>
+        <td><progress value="30" max="100"></progress></td>
+      </tr>
+      <tr>
+        <td>자동차</td>
+        <td>:</td>
+        <td>
+          <select name="cars" id="cars">
+            <option value="bmw">BMW</option>
+            <option value="benz">Benz</option>
+            <option value="hyundai">현대자동차</option>
+            <option value="kia">기아자동차</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+
+
+</body>
+</html>

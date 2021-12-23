@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    
+    function testAvg(arr=[]){
+      let sum = 0;
+      for(let i=0;i<arr.length;i++){
+        sum += Number(prompt(arr[i] + " 점수는?", "0"));
+      }
+
+      let avg = sum / arr.length;
+
+      return avg;
+    }
+    
+    /*
+    function testAvg(arr){
+      let sum = 0;
+      for(let i=0;i<arr.length;i++){
+        sum += Number(prompt(arr[i] + " 점수는?", "0"));
+      }
+
+      let avg = sum / arr.length;
+
+      return avg;
+    }
+    */
+
+    let arrSub = ["국어", "수학"];
+    let rlt = testAvg(arrSub);
+    console.log(rlt);
+    
+  </script>
+</body>
+</html>

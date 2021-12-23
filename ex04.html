@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .tt {
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <table border="1">
+    <tr>
+      <td colspan="2" class="tt">1</td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="tt">3</td>
+      <td class="tt">4</td>
+    </tr>
+    <tr>
+      <td class="tt">6</td>
+    </tr>
+  </table>
+  <br><br>
+
+  <form action="">
+    <table>
+      <tr>
+        <td>아이디</td>
+        <td>:</td>
+        <td><input type="text" name="id" id="id"></td>
+      </tr>
+      <tr>
+        <td>패스워드</td>
+        <td>:</td>
+        <td><input type="text" name="pw" id="pw"></td>
+      </tr>
+      <tr>
+        <td>수강과목</td>
+        <td>:</td>
+        <td>Java<input type="checkbox" name="sb" value="1">&nbsp;
+          JSP<input type="checkbox" name="sb" value="2">&nbsp;
+          Spring<input type="checkbox" name="sb" value="3">
+        </td>
+      </tr>
+      <tr>
+        <td>성별</td>
+        <td>:</td>
+        <td>남성<input type="radio" name="gender" value="1">&nbsp;
+          여성<input type="radio" name="gender" value="2">
+        </td>
+      </tr>
+      <tr>
+        <td>메모장</td>
+        <td>:</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="2"><textarea name="tx" id="tx" cols="23" rows="5" placeholder="메모를 작성하세요"></textarea></td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+    </table>
+  </form>
+  <input type="text" name="" id="" hidden>
+</body>
+</html>

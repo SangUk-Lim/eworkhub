@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="./ex.js"></script>
+  <style>
+    *{margin: 0;}
+    .blue{color: #00f;}
+    .red{color: #f00;}
+    h1 {
+      color: red;
+      
+    }
+    
+  </style>
+  
+</head>
+<body>
+  <h1>텍스트 색상은 빨강입니다</h1>
+  <script>
+    {
+      let s1 = '가,나,다,라,마';
+      let s2 = s1.split(',');
+      let s3 = s1.split(',');
+      
+      let s4 = s2.concat(s3);
+      document.write(s4 + '<br>');
+      console.log(s4);
+
+      let s5 = s2 + s3;
+      document.write(s5 + '<br>');
+      console.log(s5);
+      console.log(typeof(s4));
+      console.log(typeof(s5));
+    }
+
+    {
+      let s1 = '자바스크립트에 오신 것을 환영합니다';
+      let n = s1.indexOf('환영');
+      document.write(n + '<br>')
+      let s2 = s1.substr(n, 2);
+      document.write(s2 + '<br>')
+    }
+
+    {
+      let s1 = "Hong's number is 123-4567.";
+      document.write(s1 + '<br>');
+      let rlt = s1.replace("Hong's", "Kim's")
+      document.write(rlt + '<br>');
+    }
+
+    if (false) {
+      let accessAllowed;
+      let age = prompt('나이를 입력해 주세요.', '');
+  
+      if (age > 18) {
+          accessAllowed = true;
+      } else {
+          accessAllowed = false;
+      }
+      alert(accessAllowed);
+    }
+
+    {
+      let num = 3.5;
+      console.log(num, 'Math.round:반올림', Math.round(num));
+      console.log(num, 'Math.ceil:올림', Math.ceil(num));
+      console.log(num, 'Math.floor:내림', Math.floor(num));
+
+      let ran = Math.random();
+      console.log(Math.floor(ran*10));
+    }
+
+    if (false) {
+      const today = new Date();
+
+      console.log(today);
+
+      const first = new Date('2021-07-01');
+      console.log(first);
+
+      const wcup = new Date(2002, 4, 31);
+      console.log(wcup);
+      console.log(wcup.getMonth());
+
+      const toNow = today.getTime();
+      console.log(toNow);
+      console.log(today.getFullYear());
+      console.log(today.getMonth()+1);
+      console.log(today.getDate());
+      console.log(today.getDay());
+      console.log(today.getHours());
+      console.log(today.getMinutes());
+
+      let d1 = new Date(2013, 7, 31, 0, 0, 0);
+      console.log(d1);
+    }
+
+    {
+      let test = function(){console.log("4번방");}
+      let arr = [];
+      console.log(arr);
+      arr.push(10);
+      arr.push("inknow");
+      arr.push(['사과', '바나나', '오렌지']);
+      arr.push({"age":10, "name":'homg'});
+      arr.push(test);
+      console.log(arr[4]);
+
+      let tmp = arr.splice(1,1);
+      console.log(arr);
+      console.log(tmp);
+
+      arr.forEach(function(element){
+        console.log(element);
+      });
+
+    }
+
+    {
+      let std = [{"name":"홍길동", kor:90, eng:90, mat:80},
+        {"name":"장길산", kor:80, eng:80, mat:100},
+        {"name":"임꺽정", kor:70, eng:70, mat:90},
+        {"name":"장승업", kor:60, eng:80, mat:60},
+        {"name":"홍경래", kor:70, eng:50, mat:40}];
+      
+      let std1 = {name:"홍길동", kor:90, eng:90, mat:80};
+      
+      console.log(std1['name'], std1.name)
+
+      for( key in std1 ){
+        console.log(key , std1[key]);
+      }
+
+
+    }
+
+  </script>
+
+
+</body>
+</html>

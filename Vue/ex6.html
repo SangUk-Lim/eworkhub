@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="target">
+        <p id="p1">첫번째단락</p>
+        <p id="p2">두번째단락</p>
+    </div>
+    <button onclick="removeNode()">누르세요</button>
+    <br>
+    <br>
+    <div id="tgt" onclick="addtext()" style="font:20px bold;">여기를 클릭하세요</div>
+    <div id="tgt1" onclick="addtext1()" style="font:20px bold;">여기를 클릭하세요</div>
+</body>
+</html>
+
+<script>
+    function removeNode() {
+        let parent = document.getElementById("target");
+        let child = document.getElementById("p1");
+        if (child == null) return;
+        parent.removeChild(child);
+    }
+
+    function addtext() {
+        if (document.createTextNode) {
+            let node = document.createTextNode("<br>동적으로 텍스트 추가");
+            document.getElementById("tgt").appendChild(node);
+        }
+        
+    }
+
+    function addtext1() {
+        let s = document.getElementById("tgt1").innerHTML;
+        document.getElementById("tgt1").innerHTML = s+"<br>동적으로";
+    }
+</script>

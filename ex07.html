@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function process() {
+      let obj = document.getElementById("target");
+      let val = obj.value.trim();
+      if (val == "" || val == null || val.length == 0 ) {
+        alert("메시지를 입력");
+      } else {
+        alert(obj.value);
+      }
+
+      
+    }
+
+  </script>
+  <h1>aaa </h1>
+  <input type="text" id="target">
+  <input type="button" value="제출" onclick="process()">
+  <!--  버튼을 클릭하면 onclick 이라는 이벤트가 발생하면 함수 process가 호출이 된다 -->
+  <input type="number" name="" id="">
+</body>
+</html>
